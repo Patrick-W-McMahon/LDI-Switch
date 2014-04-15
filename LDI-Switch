@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "display all input devices";
+xinput list;
+echo "select device: ";
+read device;
+echo "1 for active 0 for deactive";
+read active;
+xinput set-prop $device "Device Enabled" $active;
